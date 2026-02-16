@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Entrepreneurship Program - The10 Youth Excellence Center">
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-content">
+        <span class="section-label">ENTREPRENEURSHIP</span>
+        <h1>Leading with Purpose</h1>
+        <p class="hero-subtitle">
+          Building the next generation of innovators through comprehensive Foundation & Leadership Camps.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="public-speaking">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Public Speaking</h2>
+        <p>Find your voice and inspire others.</p>
+      </div>
+      <div class="content-placeholder">
+        <p>Curriculum for public speaking, debate, and presentation skills training.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="methodology">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Methodology</h2>
+        <p>Our unique approach to nurturing entrepreneurial mindset.</p>
+      </div>
+      
+      <div class="methodology-grid">
+        <div class="methodology-card">
+          <h3>I-O-A-M Framework</h3>
+          <p>Insight - Observe - Analyze - Monitor. A systematic approach to problem solving.</p>
+        </div>
+        <div class="methodology-card">
+          <h3>Growth & Flow Mindset</h3>
+          <p>Cultivating resilience and the state of flow in work and life.</p>
+        </div>
+        <div class="methodology-card">
+          <h3>Kaizen</h3>
+          <p>Continuous incremental improvement for excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .program-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .program-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+
+  .content-placeholder {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .methodology-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+  }
+
+  .methodology-card h3 { color: var(--gold-dark); margin-bottom: 1rem; }
+</style>

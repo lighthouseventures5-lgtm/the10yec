@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import founderImage from '../../assets/images/srini-gurrapu.jpg';
+---
+
+<BaseLayout title="Our Team - The10 Youth Excellence Center">
+  <section class="team-hero">
+    <div class="container">
+      <div class="team-hero-content">
+        <span class="section-label">OUR TEAM</span>
+        <h1>Meet the People Behind The10YEC</h1>
+        <p class="hero-subtitle">
+          Dedicated leaders and mentors committed to empowering the next generation through 
+          holistic excellence and transformative education.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">LEADERSHIP</span>
+        <h2>Our <span class="text-gold">Founder</span></h2>
+      </div>
+
+      <div class="founder-profile">
+        <div class="founder-image">
+          <Image src={founderImage} alt="Srini Gurrapu - Founder & Visionary of The10YEC" />
+        </div>
+        <div class="founder-content">
+          <h3>Srini Gurrapu</h3>
+          <p class="founder-title">Founder & Visionary</p>
+          <div class="founder-bio">
+            <p>
+              An entrepreneur, leader, and mentor dedicated to empowering the next generation through holistic excellence. 
+              With extensive experience in technology, product strategy, and leadership across global organizations, he brings 
+              a strong foundation of innovation and real-world insight to youth development.
+            </p>
+            <p>
+              As the founder of The 10YEC (Youth Excellence Center), he integrates evidence-based practices to help young 
+              individuals build clarity, confidence, resilience, and purpose. His vision is to create future-ready leaders 
+              who are not only skilled and innovative but also grounded, self-aware, and committed to creating positive 
+              impact in society.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">OUR APPROACH</span>
+        <h2>What Sets Us <span class="text-blue">Apart</span></h2>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Evidence-Based Practices</h3>
+          <p>We integrate proven methodologies from ancient yogic wisdom with modern innovation and leadership frameworks.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3>Holistic Development</h3>
+          <p>Our programs address mind, body, and purpose—creating well-rounded, resilient, and grounded young leaders.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">💡</div>
+          <h3>Real-World Impact</h3>
+          <p>We emphasize practical skills, entrepreneurship, and social consciousness to create meaningful change.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Community & Service</h3>
+          <p>Through our sharing initiatives, we foster compassion, empathy, and a commitment to serving others.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .team-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .team-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .team-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+
+  .founder-profile {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .founder-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .founder-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .founder-content h3 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .founder-title {
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .founder-bio p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .value-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .value-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .value-card h3 {
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .value-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+
+  @media (max-width: 768px) {
+    .founder-profile {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .founder-image {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

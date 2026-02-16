@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Volunteer - The10 Youth Excellence Center">
+  <section class="section-large">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">JOIN US</span>
+        <h1>Volunteer With Us</h1>
+        <p>Give back to the community and grow through service.</p>
+      </div>
+      
+      <div class="volunteer-card">
+        <div class="volunteer-icon">🌟</div>
+        <h2>Make a Difference Through Service</h2>
+        <p>Volunteering at The10YEC is more than just giving back—it's a transformative journey of personal growth and community impact.</p>
+        
+        <div class="opportunities-grid">
+          <div class="opportunity">
+            <h3>🧘 Yoga Assistant</h3>
+            <p>Support yoga instructors and help students with their practice</p>
+          </div>
+          <div class="opportunity">
+            <h3>💡 Mentorship</h3>
+            <p>Guide younger students in entrepreneurship and leadership</p>
+          </div>
+          <div class="opportunity">
+            <h3>🤝 Community Outreach</h3>
+            <p>Organize and participate in humanitarian projects</p>
+          </div>
+          <div class="opportunity">
+            <h3>📚 Event Support</h3>
+            <p>Help coordinate workshops, camps, and special events</p>
+          </div>
+        </div>
+
+        <div class="benefits-section">
+          <h3>What You'll Gain</h3>
+          <ul class="benefits-list">
+            <li>Leadership and organizational skills</li>
+            <li>Community service hours (for students)</li>
+            <li>Connection with like-minded individuals</li>
+            <li>Personal growth through Yama & Niyama principles</li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <p>Ready to make an impact?</p>
+          <a href="/contact" class="btn btn-primary">Express Your Interest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .volunteer-card {
+    text-align: center;
+    padding: 4rem 3rem;
+    background: white;
+    border-radius: 20px;
+    margin-top: 3rem;
+    box-shadow: var(--shadow-lg);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .volunteer-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .volunteer-card h2 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+
+  .volunteer-card > p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .opportunity {
+    background: var(--sand);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .opportunity h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .opportunity p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .benefits-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--cream);
+    border-radius: 12px;
+  }
+
+  .benefits-section h3 {
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .benefits-list {
+    list-style: none;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .benefits-list li {
+    padding: 0.75rem 0 0.75rem 2rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .cta-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sand);
+  }
+
+  .cta-section p {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .volunteer-card {
+      padding: 3rem 2rem;
+    }
+
+    .opportunities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

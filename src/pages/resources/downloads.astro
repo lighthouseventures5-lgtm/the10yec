@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Downloads - The10 Youth Excellence Center">
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-content">
+        <span class="section-label">DOWNLOADS</span>
+        <h1>Downloadable Resources</h1>
+        <p class="hero-subtitle">
+          Access practical tools, templates, and guides to support your journey toward 
+          personal excellence and growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">RESOURCES</span>
+        <h2>Downloadable <span class="text-gold">Tools</span></h2>
+        <p>Practical resources to help you integrate the teachings into your daily life</p>
+      </div>
+
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon">📄</div>
+          <h3>Daily Practice Tracker</h3>
+          <p>Track your meditation, yoga, and reflection practices to build consistency and observe your growth over time.</p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">📊</div>
+          <h3>Goal Setting Workbook</h3>
+          <p>Set and achieve meaningful personal and professional goals using proven frameworks and guided exercises.</p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">🎯</div>
+          <h3>Vision Board Template</h3>
+          <p>Visualize your dreams and create actionable plans to bring your aspirations to life.</p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">📝</div>
+          <h3>Morning Meditation Guide</h3>
+          <p>A comprehensive guide to starting your day with mindful breathing and intention setting practices.</p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">📖</div>
+          <h3>Gratitude Journal Template</h3>
+          <p>Cultivate contentment through daily gratitude practice with our structured journal template.</p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">🌙</div>
+          <h3>Evening Reflection Prompts</h3>
+          <p>Guided reflection questions to review your day with mindfulness and self-compassion.</p>
+          <a href="#" class="btn btn-primary">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">NEED MORE GUIDANCE?</span>
+        <h2>Join Our <span class="text-blue">Programs</span></h2>
+      </div>
+
+      <div class="programs-cta">
+        <p>
+          These resources are a great starting point, but nothing compares to the personalized 
+          guidance and community support you'll receive in our programs.
+        </p>
+        <div class="cta-buttons">
+          <a href="/programs" class="btn btn-primary">Explore Programs</a>
+          <a href="/contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .program-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .program-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .resource-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .resource-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .resource-card h3 {
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .resource-card p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    line-height: 1.6;
+  }
+
+  .resource-card .btn {
+    margin-top: auto;
+  }
+
+  .programs-cta {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+
+  .programs-cta p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .resources-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sutras & Teachings - The10 Youth Excellence Center">
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-content">
+        <span class="section-label">SUTRAS & TEACHINGS</span>
+        <h1>Ancient Wisdom for Modern Life</h1>
+        <p class="hero-subtitle">
+          Discover the foundational teachings of yoga philosophy that guide personal growth, 
+          entrepreneurship, and inner awareness in the modern world.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">FOUNDATIONAL TEXTS</span>
+        <h2>Core <span class="text-gold">Teachings</span></h2>
+        <p>Explore the timeless wisdom that forms the foundation of our programs</p>
+      </div>
+
+      <div class="sutras-grid">
+        <div class="sutra-card">
+          <div class="sutra-icon">📖</div>
+          <h3>Yoga Sutras of Patanjali</h3>
+          <p class="sanskrit">Yogaś citta-vṛtti-nirodhaḥ (Sutra 1.2)</p>
+          <p>"Yoga is the stilling of the mind's fluctuations"</p>
+          <ul class="teaching-points">
+            <li>Foundation of classical yoga philosophy</li>
+            <li>196 aphorisms on the path to enlightenment</li>
+            <li>Guidance on the Eight Limbs of Yoga</li>
+          </ul>
+        </div>
+
+        <div class="sutra-card">
+          <div class="sutra-icon">📚</div>
+          <h3>Bhagavad Gita</h3>
+          <p class="sanskrit">Yogasthaḥ kuru karmāṇi (Chapter 2.48)</p>
+          <p>"Established in Yoga, perform your duties"</p>
+          <ul class="teaching-points">
+            <li>Practical wisdom for daily life</li>
+            <li>Balance between action and inner peace</li>
+            <li>Foundation for effective leadership</li>
+          </ul>
+        </div>
+
+        <div class="sutra-card">
+          <div class="sutra-icon">🌟</div>
+          <h3>Upanishads</h3>
+          <p class="sanskrit">Tat Tvam Asi - "You Are That" (Chandogya Upanishad)</p>
+          <p>"Recognize the oneness between oneself and the universe"</p>
+          <ul class="teaching-points">
+            <li>Self-awareness as gateway to oneness</li>
+            <li>Understanding universal consciousness</li>
+            <li>Spiritual insights for modern challenges</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">DAILY PRACTICES</span>
+        <h2>Applying the <span class="text-blue">Wisdom</span></h2>
+      </div>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <div class="practice-icon">🎯</div>
+          <h3>Excellence vs Perfection</h3>
+          <p>Embracing progress over perfection for wise action and inner peace.</p>
+        </div>
+
+        <div class="practice-card">
+          <div class="practice-icon">🧘</div>
+          <h3>Inner Peace & Outer Dynamism (IPOD)</h3>
+          <p>Act with skill and balance for effective leadership and purposeful action.</p>
+        </div>
+
+        <div class="practice-card">
+          <div class="practice-icon">💡</div>
+          <h3>Daily Reflection Prompts</h3>
+          <p>Questions to inspire insight and growth in your entrepreneurial journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .program-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .program-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+
+  .sutras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .sutra-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .sutra-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .sutra-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sutra-card h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .sanskrit {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sutra-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .teaching-points {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .teaching-points li {
+    padding: 0.6rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    color: var(--text-secondary);
+  }
+
+  .teaching-points li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: bold;
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .practice-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+  }
+
+  .practice-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .practice-card h3 {
+    color: var(--blue);
+    margin-bottom: 1rem;
+  }
+
+
+  @media (max-width: 768px) {
+    .sutras-grid,
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

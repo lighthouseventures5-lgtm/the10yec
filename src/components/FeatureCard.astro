@@ -1,0 +1,74 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  link?: string;
+  linkText?: string;
+}
+
+const { icon, title, description, link, linkText = "Learn More →" } = Astro.props;
+---
+
+<div class="feature-card">
+  <div class="feature-icon">{icon}</div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  {link && <a href={link} class="feature-link">{linkText}</a>}
+</div>
+
+<style>
+  .feature-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(244, 180, 26, 0.15);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  .feature-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+    flex-grow: 1;
+  }
+
+  .feature-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--blue);
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .feature-link:hover {
+    color: var(--gold);
+  }
+</style>

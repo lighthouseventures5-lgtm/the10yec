@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="The10 Philosophy - Zero to One">
+  <!-- Hero -->
+  <section class="philosophy-hero">
+    <div class="container text-center">
+      <span class="section-label">THE 10 FILOSOPHY</span>
+      <h1>From Zero to The One</h1>
+      <p class="hero-subtitle">
+        The core philosophy of The 10 Youth Excellence Center is rooted in the journey of self-transformation—
+        emptying oneself of limitations to realize infinite potential.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Belief -->
+  <section class="section">
+    <div class="container-narrow">
+      <div class="core-concept text-center">
+        <div class="concept-graphic">
+          <svg viewBox="0 0 300 300" width="200" height="200">
+            <circle cx="150" cy="150" r="140" fill="none" stroke="url(#conceptGrad)" stroke-width="2" opacity="0.3"/>
+            <circle cx="150" cy="150" r="100" fill="none" stroke="url(#conceptGrad)" stroke-width="2" opacity="0.5"/>
+            <text x="150" y="165" text-anchor="middle" font-size="60" fill="url(#conceptGrad)" font-family="Playfair Display" font-weight="700">0 → 1</text>
+            <defs>
+              <linearGradient id="conceptGrad">
+                <stop offset="0%" stop-color="#F4B41A"/>
+                <stop offset="100%" stop-color="#1E88E5"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        <blockquote class="main-quote">
+          "We have to become zero to become 'The One'"
+        </blockquote>
+        
+        <div class="concept-text">
+          <p>
+            At The 10YEC, we believe that true excellence begins with humility and openness. 
+            By becoming "zero"—letting go of ego, prejudices, and self-imposed limitations—we create 
+            space for new knowledge, skills, and perspectives to enter.
+          </p>
+          <p>
+            Only from this state of emptiness can we fill ourselves with the essence of excellence, 
+            becoming "The One"—a unique individual capable of making a singular impact on the world.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Pillars of Discipline -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-label">THE FOUNDATION</span>
+        <h2>Three Pillars of Discipline</h2>
+        <p>Our philosophy is built upon three ancient yogic principles tailored for modern youth.</p>
+      </div>
+
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-icon">🧠</div>
+          <h3>Samyama</h3>
+          <h4>Total Mind Control</h4>
+          <p>
+            The art of perfect concentration, meditation, and absorption. Samyama gives our youth 
+            the mental discipline to focus intensely, learn rapidly, and master any subject or skill.
+          </p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon">⚖️</div>
+          <h3>Yama</h3>
+          <h4>Social Ethics</h4>
+          <p>
+            Developing right conduct towards others—non-violence, truthfulness, non-stealing, 
+            continence, and non-greed. These values form the bedrock of socially conscious leadership.
+          </p>
+        </div>
+
+        <div class="principle-card">
+          <div class="principle-icon">🧘</div>
+          <h3>Niyama</h3>
+          <h4>Personal Observances</h4>
+          <p>
+            Cultivating internal discipline—purity, contentment, austerity, self-study, and 
+            surrender to a higher purpose. Niyama builds the character required for sustained excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration -->
+  <section class="section">
+    <div class="container">
+      <div class="integration-content">
+        <div class="text-content">
+          <span class="section-label">SYNERGY</span>
+          <h2>Where Ancient Wisdom Meets Modern Innovation</h2>
+          <p>
+            The 10YEC is unique in its integration of these timeless philosophical principles with 
+            cutting-edge modern disciplines. We don't view them as separate.
+          </p>
+          <p>
+            We believe that:
+          </p>
+          <ul class="integration-list">
+            <li><strong>Yoga enhances Technology:</strong> A focused mind codes better.</li>
+            <li><strong>Ethics guide Entrepreneurship:</strong> Yama & Niyama create sustainable businesses.</li>
+            <li><strong>Service grounds Success:</strong> Giving back keeps the ego in check ("Stay Zero").</li>
+          </ul>
+        </div>
+        <div class="visual-content">
+          <div class="venn-diagram">
+             <!-- Simplified CSS Venn Diagram -->
+             <div class="circle c1"><span>Wisdom</span></div>
+             <div class="circle c2"><span>Innovation</span></div>
+             <div class="center-text">10YEC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .philosophy-hero {
+    padding: 10rem 0 6rem;
+    background: var(--gradient-hero);
+  }
+
+  .philosophy-hero h1 {
+    margin: 1.5rem 0;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+  }
+
+  .concept-graphic {
+    margin-bottom: 2rem;
+  }
+
+  .main-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--blue);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  .concept-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .concept-text p {
+    margin-bottom: 1.5rem;
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .principle-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .principle-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .principle-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .principle-card h3 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .principle-card h4 {
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .integration-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .integration-list {
+    list-style: none;
+    margin-top: 1.5rem;
+  }
+
+  .integration-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .integration-list li::before {
+    content: '•';
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+  }
+
+  .venn-diagram {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .c1 {
+    background: var(--gold);
+    top: 0;
+    left: 50px;
+  }
+
+  .c2 {
+    background: var(--blue);
+    bottom: 0;
+    left: 50px;
+  }
+
+  .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+
+  @media (max-width: 768px) {
+    .integration-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .integration-list {
+      text-align: left;
+      display: inline-block;
+    }
+  }
+</style>

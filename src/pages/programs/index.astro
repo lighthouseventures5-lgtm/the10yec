@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import yogaFoundationImage from '../../assets/images/yoga-foundation-class.jpg';
+import yogaChampionshipImage from '../../assets/images/yoga-championship-training.jpg';
+---
+
+<BaseLayout title="Current Programs - The10 Youth Excellence Center" hideCTA={true}>
+  <!-- Hero -->
+  <section class="program-hero">
+    <div class="container text-center">
+      <span class="section-label">CURRENT PROGRAMS</span>
+      <h1>What's Happening at The10</h1>
+      <p class="hero-subtitle">
+        Explore our ongoing programs and upcoming events designed to empower youth through yoga, technology, entrepreneurship, and community service.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs List -->
+  <section id="current-programs" class="section">
+    <div class="container">
+
+      <!-- Yoga & Wellness -->
+      <div class="program-row">
+        <div class="program-image">
+          <Image src={yogaFoundationImage} alt="Students practicing yoga poses at The10YEC Foundation Class" />
+        </div>
+        <div class="program-details">
+          <span class="program-tag">Yoga & Wellness</span>
+          <h2>70 Minute Yoga Foundation Class</h2>
+          <p>
+            Join us for weekly The10YEC-Yoga Foundation Class at The10YEC ranch in Frisco, TX 
+            to practice with USA Yoga Champion Athletes. Build a strong foundation in yoga 
+            fundamentals and wellness practices.
+          </p>
+          <ul class="program-highlights">
+            <li>Weekly Class - Saturday 9:30AM Central</li>
+            <li>70 Minute Foundation Sessions</li>
+            <li>Train with USA Yoga Champion Athletes</li>
+            <li>All Levels Welcome</li>
+          </ul>
+          <p style="margin-top: 1rem; font-weight: 600; color: var(--blue);">
+            <strong>VENUE:</strong> The10YEC Ranch, 7600 Cottonwood St, Frisco, TX 75033
+          </p>
+          <a href="/programs/yoga" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Entrepreneurship -->
+      <div class="program-row reverse">
+        <div class="program-image">
+          <Image src={yogaChampionshipImage} alt="USA Yoga Championship training session at The10YEC" />
+        </div>
+        <div class="program-details">
+          <span class="program-tag">Yoga & Wellness</span>
+          <h2>USA Yoga Championship Training</h2>
+          <p>
+            Join us for weekly USA Yoga 2026 Championship training at The10YEC ranch to practice with 
+            USA Yoga Champion Athletes. All age levels welcome - Youth, Adults, and Seniors. 
+            Training sessions every Sunday at 11AM Central.
+          </p>
+          <ul class="program-highlights">
+            <li>Weekly Training - Sunday 11AM Central</li>
+            <li>USA Yoga Champion Athletes</li>
+            <li>All Age Levels - Youth, Adults, Seniors</li>
+            <li>New 2026 Qualifier: Frisco, TX - April 4, 2026</li>
+          </ul>
+          <p style="margin-top: 1rem; font-weight: 600; color: var(--blue);">
+            <strong>VENUE:</strong> The10YEC Ranch, 7600 Cottonwood St, Frisco, TX 75033
+          </p>
+          <a href="/programs/yoga" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: var(--gradient-hero);
+  }
+
+  .program-hero h1 {
+    margin: 1.5rem 0;
+    line-height: 1.3;
+  }
+
+  .program-hero .section-label {
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+  }
+
+  /* Program Rows */
+  .program-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .program-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .program-row.reverse {
+    direction: rtl;
+  }
+
+  .program-row.reverse > * {
+    direction: ltr;
+  }
+
+  .program-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #f8f9fa;
+  }
+
+  .program-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .program-row:hover .program-image img {
+    transform: scale(1.03);
+  }
+
+  .program-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .program-tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.4rem 1.2rem;
+    background: var(--gradient-gold);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .program-details h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .program-details p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  .program-highlights {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .program-highlights li {
+    padding: 0.4rem 1rem;
+    background: rgba(30, 136, 229, 0.08);
+    color: var(--blue);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .program-details .btn {
+    width: fit-content;
+    margin-top: 0.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .program-row {
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .program-row,
+    .program-row.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .program-details h2 {
+      font-size: 1.6rem;
+    }
+  }
+</style>

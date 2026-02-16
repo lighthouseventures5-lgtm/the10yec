@@ -1,0 +1,68 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  label?: string;
+  gradient?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  label = "PROGRAM",
+  gradient = "linear-gradient(135deg, var(--gold) 0%, #F4A000 100%)"
+} = Astro.props;
+---
+
+<section class="program-hero" style={`background: ${gradient};`}>
+  <div class="container">
+    <div class="program-hero-content">
+      <span class="section-label">{label}</span>
+      <h1>{title}</h1>
+      {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    color: white;
+    text-align: center;
+  }
+
+  .program-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    margin: 1rem 0;
+    letter-spacing: 0.5px;
+  }
+
+  .program-hero .section-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+    color: white;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    .program-hero h1 {
+      font-size: 2.2rem;
+    }
+
+    .program-hero {
+      padding: 8rem 0 4rem;
+    }
+  }
+</style>

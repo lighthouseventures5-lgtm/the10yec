@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sharing & Service - The10 Youth Excellence Center">
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-content">
+        <span class="section-label">SHARING & SERVICE</span>
+        <h1>Community Impact</h1>
+        <p class="hero-subtitle">
+          Non-profit initiatives focused on Education & Empowerment. Supporting communities through impactful service projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="community">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Community & Impact</h2>
+        <p>Making a difference together.</p>
+      </div>
+      
+      <div class="impact-grid">
+        <div class="impact-card">
+          <h3>Youth Entrepreneurs</h3>
+          <p>Empowering young minds to create social value through business.</p>
+        </div>
+        <div class="impact-card">
+          <h3>Social Impact</h3>
+          <p>Measurable changes in our local and global communities.</p>
+        </div>
+        <div class="impact-card">
+          <h3>Partnerships</h3>
+          <p>Collaborating with organizations for greater reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .program-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .program-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .impact-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+  }
+
+  .impact-card h3 { color: var(--moss); margin-bottom: 1rem; }
+</style>

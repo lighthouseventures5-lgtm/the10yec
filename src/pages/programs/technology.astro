@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Technology Program - The10 Youth Excellence Center">
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-content">
+        <span class="section-label">TECHNOLOGY</span>
+        <h1>Innovating the Future</h1>
+        <p class="hero-subtitle">
+          Preparing youth for the future with hands-on experiences in cutting-edge technologies, 
+          robotics, AI, and startup acceleration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="robotics">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Robotics</h2>
+        <p>Hands-on engineering and programming experience.</p>
+      </div>
+      <div class="content-placeholder">
+        <p>Content for Robotics program including curriculum, kits used, and competition details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ai-hackathon">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>AI Hackathon</h2>
+        <p>Solving real-world problems with Artificial Intelligence.</p>
+      </div>
+      <div class="content-placeholder">
+        <p>Content for AI Hackathon events, themes, and past project showcases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="accelerator">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Startup Accelerator</h2>
+        <p>Launch your tech idea into a real business.</p>
+      </div>
+      <div class="content-placeholder">
+        <p>Details about the startup accelerator program, mentorship, and funding opportunities.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .program-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .program-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+  
+  .content-placeholder {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+</style>

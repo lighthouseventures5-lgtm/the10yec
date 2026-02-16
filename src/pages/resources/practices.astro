@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Practices & Tools - The10 Youth Excellence Center">
+  <section class="program-hero">
+    <div class="container">
+      <div class="program-hero-content">
+        <span class="section-label">PRACTICES & TOOLS</span>
+        <h1>Practices & Tools</h1>
+        <p class="hero-subtitle">
+          Explore resources to cultivate mind-body mastery and conscious action in your daily life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="practices-grid">
+        <div class="practice-card blue-card">
+          <div class="card-icon">🧘</div>
+          <h3>Yoga & Meditation Practices</h3>
+          <p>Guided meditations and mindful yoga sequences calm, energize, and center yourself.</p>
+          <div class="why-matters">
+            <strong>Why it matters today:</strong>
+            <p>A calm mind is needed on wise of [action].</p>
+          </div>
+        </div>
+
+        <div class="practice-card yellow-card">
+          <div class="card-icon">💡</div>
+          <h3>Mental Fitness Tools</h3>
+          <p>Exercises for focus, emotional regulation, and managing thoughts and habits.</p>
+          <div class="why-matters">
+            <strong>Why it matters today:</strong>
+            <p>Actions wise and balance co maritecy of [unclear].</p>
+          </div>
+        </div>
+
+        <div class="practice-card green-card">
+          <div class="card-icon">🎯</div>
+          <h3>Leadership & Life Tools</h3>
+          <p>Frameworks for decision making, ethical action, and purpose-driven living.</p>
+          <div class="why-matters">
+            <strong>Why it matters today:</strong>
+            <p>Arains works for decision making ethical actions and purpose-driven living.</p>
+          </div>
+        </div>
+
+        <div class="practice-card orange-card">
+          <div class="card-icon">📅</div>
+          <h3>Daily Integration</h3>
+          <p>Simple practices to set intentions and reflect on your day with clarity and gratitude.</p>
+          <div class="why-matters">
+            <strong>Why it matters today:</strong>
+            <p>Questions are your beagins and g oneness [action].</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="resources-types">
+        <div class="resource-type">
+          <div class="type-icon">📝</div>
+          <h3>Step-by-step Guides</h3>
+        </div>
+
+        <div class="resource-type">
+          <div class="type-icon">🎧</div>
+          <h3>Audio Practices</h3>
+        </div>
+
+        <div class="resource-type">
+          <div class="type-icon">📹</div>
+          <h3>Video Tutorials</h3>
+        </div>
+
+        <div class="resource-type">
+          <div class="type-icon">📄</div>
+          <h3>Printable Templates</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .program-hero {
+    padding: 10rem 0 6rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #F4A000 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .program-hero h1 { 
+    color: white; 
+    margin: 1rem 0; 
+  }
+  
+  .program-hero .section-label { 
+    color: white; 
+  }
+  
+  .hero-subtitle { 
+    font-size: 1.3rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    opacity: 0.95; 
+    color: white; 
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .practice-card {
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .practice-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .blue-card {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+  }
+
+  .yellow-card {
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFECB3 100%);
+  }
+
+  .green-card {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+  }
+
+  .orange-card {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFCC80 100%);
+  }
+
+  .card-icon {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  }
+
+  .practice-card h3 {
+    color: #37474F;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .practice-card > p {
+    color: #546E7A;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1rem;
+  }
+
+  .why-matters {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(55, 71, 79, 0.15);
+  }
+
+  .why-matters strong {
+    display: block;
+    color: #37474F;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .why-matters p {
+    color: #546E7A;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+  }
+
+  .resources-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .resource-type {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .resource-type:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .type-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .resource-type h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+
+  @media (max-width: 768px) {
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .resources-types {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,809 @@
+---
+import '../styles/global.css';
+import { Image } from 'astro:assets';
+import logoImage from '../assets/images/logo.png';
+
+interface Props {
+  title: string;
+  description?: string;
+  hideCTA?: boolean;
+}
+
+const { title, description = "The10 Youth Excellence Center - Empowering youth through Yoga, Technology, Entrepreneurship, and Community Service", hideCTA = false } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="youth excellence, yoga, technology, entrepreneurship, community service, youth development, leadership, wellness, education, The10YEC">
+  <meta name="author" content="The10 Youth Excellence Center">
+  <meta name="robots" content="index, follow">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:site_name" content="The10 Youth Excellence Center">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="/logo.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content="/logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  
+  <title>{title}</title>
+</head>
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+  
+  <!-- Organic Background -->
+  <div class="organic-bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+ 
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <Image src={logoImage} alt="The10 YEC Logo" class="logo-image" loading="eager" />
+      </a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        
+        <li class="nav-dropdown">
+          <a href="/#about">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="/about/vision">Vision & Purpose</a></li>
+            <li><a href="/about/philosophy">The10 Philosophy</a></li>
+            <li><a href="/about/accomplishments">Accomplishments</a></li>
+            <li><a href="/about/team">Team</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-dropdown">
+          <a href="/#programs">Programs</a>
+          <ul class="dropdown-menu">
+            <li><a href="/programs/yoga">Yoga & Wellness</a></li>
+            <li><a href="/programs/technology">Technology</a></li>
+            <li><a href="/programs/entrepreneurship">Entrepreneurship</a></li>
+            <li><a href="/programs/sharing">Sharing</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-dropdown">
+          <a href="/#resources">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a href="/resources/sutras">Sutras & Teachings</a></li>
+            <li><a href="/resources/practices">Practices & Tools</a></li>
+            <li><a href="/resources/downloads">Downloads</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-dropdown">
+          <a href="/contact">Join Us</a>
+          <ul class="dropdown-menu">
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/join/workshops">Workshops</a></li>
+            <li><a href="/join/volunteer">Volunteer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <slot />
+  </main>
+
+  <!-- Join the Movement CTA Section -->
+  {!hideCTA && <section id="join" class="section cta-section">
+    <div class="container-narrow text-center">
+      <h2>Join the Movement</h2>
+      <p>Take the next step toward personal growth and social impact. Contact us to enroll in our programs or support our initiatives.</p>
+      <div class="cta-buttons">
+        <a href="/programs" class="btn btn-primary">Join Our Programs</a>
+        <a href="/contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div>
+            <strong>Visit Us</strong>
+            <p>7600 Cottonwood St, Frisco, TX</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <div>
+            <strong>Call Us</strong>
+            <p>408-390-2871</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <div>
+            <strong>Email Us</strong>
+            <p>the10yec@gmail.com</p>
+            <p>srini.gurrapu@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="logo-text">THE<span class="logo-highlight">10</span></span>
+            <p class="footer-tagline">Youth.Excellence.You.</p>
+          </div>
+          <p class="footer-description">
+            Empowering youth through the integration of ancient yogic wisdom with modern innovation in technology and entrepreneurship.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@the10yec" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/the10yec" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://open.spotify.com/episode/0wyfPnu95QJL2EU2Uu5JSd?si=tp7eE8DtT0a0jiJc-mdFUg" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/the10yec" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="/programs/yoga">Yoga & Wellness</a></li>
+            <li><a href="/programs/entrepreneurship">Entrepreneurship</a></li>
+            <li><a href="/programs/technology">Technology</a></li>
+            <li><a href="/programs/sharing">Sharing & Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/resources/sutras">Sutras & Teachings</a></li>
+            <li><a href="/resources/practices">Practices & Tools</a></li>
+            <li><a href="/about/philosophy">The10 Philosophy</a></li>
+            <li><a href="/about/team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>7600 Cottonwood St<br>Frisco, TX 75034</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>408-390-2871</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>the10yec@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 The10 Youth Excellence Center. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* Navigation Styles */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 252, 247, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(244, 180, 26, 0.1);
+      animation: slideDown 0.6s ease-out;
+    }
+
+    /* Premium: Scrolled State */
+    .nav.scrolled {
+      padding: 0.8rem 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav.scrolled .logo-text {
+      font-size: 1.4rem;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .logo-image {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--text-primary);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li > a {
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links > li > a:not(.btn)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-vibrant);
+      transition: width 0.3s ease, left 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-links > li > a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links > li > a:not(.btn):hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    .btn-nav {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      list-style: none;
+      padding: 1rem 0;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu li a:hover {
+      background: var(--sand);
+      color: var(--gold);
+      padding-left: 2rem;
+    }
+
+    /* Nested Dropdown */
+    .nested-dropdown {
+      position: relative;
+    }
+
+    .dropdown-submenu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: white;
+      list-style: none;
+      padding: 1rem 0;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      min-width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .nested-dropdown:hover > .dropdown-submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: linear-gradient(135deg, #2C2C2C 0%, #1a1a1a 100%);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo .logo-text {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .footer-tagline {
+      color: var(--gold);
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--gradient-vibrant);
+      transform: translateY(-3px);
+    }
+
+    .footer-col h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: var(--gold);
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold);
+      padding-left: 0.5rem;
+    }
+
+    .footer-contact li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-contact svg {
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* Mobile Navigation */
+    @media (max-width: 1024px) {
+      .nav-toggle {
+        display: flex;
+        z-index: 1001;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 300px;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6rem 2rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.4s ease;
+        box-shadow: var(--shadow-xl);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .dropdown-submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding-left: 1rem;
+        border-left: 2px solid var(--sand);
+        margin-left: 0.5rem;
+        display: none; /* Hidden by default on mobile for compactness, or show it? Let's show it */
+        display: block;
+      }
+      
+      .dropdown-submenu li a {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+
+  /* Accessibility: Skip to Content Link */
+  .skip-to-content {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    z-index: 10000;
+    text-decoration: none;
+    transition: top 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .skip-to-content:focus {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    outline: 3px solid white;
+    outline-offset: -3px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: white;
+  }
+
+  .cta-section h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-section > .container-narrow > p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-section .btn-primary {
+    background: var(--gradient-gold);
+  }
+
+  .cta-section .btn-secondary {
+    background: white;
+    color: var(--blue);
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-item svg {
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .contact-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  .contact-item p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const isActive = navLinks.classList.toggle('active');
+        // Prevent body scroll when menu is open
+        if (isActive) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Close menu when clicking a link
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Premium: Scroll Reveal Animations
+    const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add stagger delay for multiple elements
+          setTimeout(() => {
+            entry.target.classList.add('active');
+          }, index * 100);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Premium: Sticky Navbar with Shrink Effect
+    const nav = document.querySelector('.nav');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
