@@ -508,14 +508,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <script>
   // Form submission handling
-  const form = document.getElementById('contactForm');
+  const form = document.getElementById('contactForm') as HTMLFormElement;
   
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
       // Get form data
-      const formData = new FormData(form);
+      const formData = new FormData(form as HTMLFormElement);
       const data = Object.fromEntries(formData);
       
       // Here you would typically send to a backend

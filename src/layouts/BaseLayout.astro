@@ -774,18 +774,15 @@ const { title, description = "The10 Youth Excellence Center - Empowering youth t
 
     // Premium: Sticky Navbar with Shrink Effect
     const nav = document.querySelector('.nav');
-    let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       
       if (currentScroll > 100) {
-        nav.classList.add('scrolled');
+        nav?.classList.add('scrolled');
       } else {
-        nav.classList.remove('scrolled');
+        nav?.classList.remove('scrolled');
       }
-      
-      lastScroll = currentScroll;
     });
 
     // Smooth scroll for anchor links
