@@ -11,35 +11,6 @@ A modern, organic website for The10 Youth Excellence Center built with Astro. Fe
 - **Zero JavaScript by Default**: Lightning-fast static pages
 - **SEO Optimized**: Semantic HTML and meta tags
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. **Install dependencies**
-```bash
-npm install
-```
-
-2. **Run development server**
-```bash
-npm run dev
-```
-
-The site will be available at `http://localhost:4321`
-
-3. **Build for production**
-```bash
-npm run build
-```
-
-4. **Preview production build**
-```bash
-npm run preview
-```
 
 ## 📁 Project Structure
 
@@ -90,9 +61,8 @@ the10yec/
 - Mobile-responsive menu
 - Comprehensive footer with all links
 
-## 📝 To Do
 
-Create additional pages:
+Additional pages:
 
 ### About Section
 - `/about/vision` - Vision & Purpose
@@ -128,54 +98,8 @@ Edit `src/styles/global.css` to customize the color palette:
 ### Content
 All content is in `.astro` files. Edit the files in `src/pages/` to update content.
 
-### Logo
-Replace the text logo in `src/layouts/BaseLayout.astro` with an image:
-```html
-<img src="/logo.png" alt="The10 YEC" class="logo-image" />
-```
 
-## 🚀 Deployment
 
-### Netlify
-1. Push your code to GitHub
-2. Connect your repo to Netlify
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-
-### Vercel
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Framework Preset: Astro
-4. Deploy!
-
-### GitHub Pages
-```bash
-npm run build
-# Upload the `dist` folder to your gh-pages branch
-```
-
-## 🛠️ Adding New Pages
-
-1. Create a new `.astro` file in `src/pages/`
-2. Import the BaseLayout
-3. Add your content
-4. The page will automatically be available at its file path
-
-Example:
-```astro
----
-import BaseLayout from '../layouts/BaseLayout.astro';
----
-
-<BaseLayout title="My New Page">
-  <section class="section">
-    <div class="container">
-      <h1>My New Page</h1>
-      <p>Content goes here</p>
-    </div>
-  </section>
-</BaseLayout>
-```
 
 ## 📧 Contact
 
